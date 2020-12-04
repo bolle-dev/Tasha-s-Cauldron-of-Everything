@@ -203,11 +203,7 @@
 	</element>
 	<element name="Favored Foe" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_FAVORED_FOE">
 		<description>
-<<<<<<< HEAD
-		<p>The Foo fighters</p>
-=======
-		<p>The Foe fighters</p>
->>>>>>> 5e2950f92b1c296430fa4e365216101a9ced1d60
+		<p>Als dit werkt ben ik blij.</p>
 		</description>
 		<sheet>
 			<description></description>
