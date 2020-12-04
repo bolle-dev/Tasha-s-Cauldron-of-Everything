@@ -201,7 +201,7 @@
 		<rules>
 		</rules>
 	</element>
-	<element name="" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_">
+	<element name="Favored Foe" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_FAVORED_FOE">
 		<description>
 		<p></p>
 		</description>
