@@ -186,7 +186,7 @@
 	<element name="Deft Explorer" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_DEFT_EXPLORER">
 		<description>
 		<p>You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.</p>
-		<<h4>Canny (1st Level)</h4>
+		<h4>Canny (1st Level)</h4>
 		<p>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.</p>
 		<p class="indent">You can also speak, read, and write two additional languages of your choice.</p>
 		<h4>Roving (6th Level)</h4>
@@ -195,56 +195,103 @@
 		<p>As an action, you can give yourself a number of temporary hit points equal to ld8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
 		<p class="indent">In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</p>
 		</description>
-		<sheet action="Action" usage="{{proficiency:bonus}}/Long Rest">
+		<sheet alt="Tireless" action="Action" usage="{{proficiency}}/Long Rest" level="10">
 			<description level="10">You can give yourself a number of temporary hit points equal to 1d8 + {{Tireless:modifier}}. Also, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</description>
 		</sheet>
 		<rules>
-			<select type="Class Feature" name="Expertise (Ranger)" level="1" number="1" supports="ID_INTERNAL_SUPPORT_EXPERTISE"/>
-			<stat name="innate speed:misc" value="5" />
-			<stat name="innate speed:climb:misc" value="{{movement:speed}}"/>
-			<stat name="innate speed:swim:misc" value="{{movement:speed}}" />
+			<select type="Class Feature" name="Expertise (Ranger)" level="1" number="1" supports="Expertise,Skill"/>
+			<stat name="innate speed:misc" value="5" bonus="base" level="6"/>
+			<stat name="innate speed:climb:misc" value="movement:speed" level="6"/>
+			<stat name="innate speed:swim:misc" value="movement:speed" level="6"/>
 			<stat name="Tireless:modifier" value="1" bonus="base" />
 			<stat name="Tireless:modifier" value="wisdom:modifier" bonus="base" />
 		</rules>
 	</element>
 	<element name="Favored Foe" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_FAVORED_FOE">
 		<description>
-		<p>How does this work?</p>
+			<p>When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).</p>
+			<p class="Indent">The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by ld4.</p>
+			<p class="Indent">You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="Indent">This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>
+				<p>When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).</p>
+				<p class="Indent">The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d{{Favored_Foe:die}}.</p>
+			</description>
 		</sheet>
 		<rules>
+			<stat name="Favored_Foe:die" value="4" level="1" bonus="base"/>
+			<stat name="Favored_Foe:die" value="6" level="6" bonus="base"/>
+			<stat name="Favored_Foe:die" value="8" level="14" bonus="base"/>
 		</rules>
 	</element>	
-	<element name="" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_">
+	<element name="Spellcasting Focus" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING_FOCUS">
 		<description>
-		<p></p>
+		<p>You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You can use a druidic focus as a spellcasting focus for your ranger spells.</description>
 		</sheet>
-		<rules>
-		</rules>
 	</element>	
-	<element name="" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_">
+	<element name="Primal Awareness" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_PRIMAL_AWARENESS">
 		<description>
-		<p></p>
+		<p>You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.</p>
 		</description>
-		<sheet>
-			<description></description>
+		<sheet usage="1/Long Rest">
+			<description>You can cast a spell from Primal Awareness once without expending a spell slot.</description>
 		</sheet>
 		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" level="3" spellcasting="Ranger"  />	
+			<grant type="Spell" id="ID_PHB_SPELL_BEAST_SENSE" level="5" spellcasting="Ranger"  />	
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" level="9" spellcasting="Ranger"  />	
+			<grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" level="13" spellcasting="Ranger"  />	
+			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" level="17" spellcasting="Ranger"  />	
 		</rules>
+	</element>
+	<element name="Martial Versatility" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_MARTIAL_VERSATILITY">
+		<description>
+			<p>Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice.</p>
+		</description>
+		<sheet display="False" />
 	</element>	
-	<element name="" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_">
+	<element name="Nature's Veil" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_NATURES_VEIL">
 		<description>
-		<p></p>
+		<p>You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</p>
+		<p class="Indent">You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest" action="Bonus Action">
+			<description>You can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Blind Fighting" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASS_FEATURE_FIGHTING_STYLE_BLIND_FIGHTING">
+		<supports>Fighting Style,Ranger</supports>
+		<description>
+			<p>You have blind sight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You have blind sight with a range of 10 feet. You can also see invisble creatures in this range.</description>
 		</sheet>
 		<rules>
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
 		</rules>
+	</element>		
+	<element name="Druidic Warrior" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASS_FEATURE_FIGHTING_STYLE_DRUIDIC_WARRIOR">
+		<supports>Fighting Style,Ranger</supports>
+		<description>
+			<p>You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
+		</description>
+		<sheet>
+			<description>Cantrips</description>
+		</sheet>
+	</element>	
+		<element name="Thrown Weapon Fighting" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASS_FEATURE_FIGHTING_STYLE_THROWN_WEAPON_FIGHTING">
+		<supports>Fighting Style,Ranger</supports>
+		<description>
+			<p>You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.</p>
+		</description>
+		<sheet>
+			<description>why does this not work anymore</description>
+		</sheet>
 	</element>		
 </elements>
