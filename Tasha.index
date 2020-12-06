@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Tasha's Cauldron of Everything</name>
+		<description>Tasha's Cauldron of Everything index file.</description>
+		<update version="0.0.1">
+			<file name="Tasha.index" url="https://raw.githubusercontent.com/bolle-dev/" />
+		</update>
+	</info>
+	<files>
+		<file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/spells.xml" />
+	  <file name="revised-ranger.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/revised-ranger.xml" />
+	</files>
+</index>
