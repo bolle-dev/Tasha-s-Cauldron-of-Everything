@@ -4,7 +4,7 @@
 		<name>Order of Scribes</name>
 		<description>Order of Scribes</description>
 		<update version="0.0.1">
-		<file name="wizard-order_of_scribes.xml" url="https://raw.githubusercontent.com/bolle-dev/" />		
+		<file name="wizard-order_of_scribes.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/wizard-order_of_scribes.xml" />		
 		</update>
 	</info>
 <element name="Order of Scribes" type="Archetype" source="Tasha's Cauldron of Everything" id="ID_WOTC_TASHA_ARCHETYPE_WIZARD_ORDER_OF_SCRIBES">
