@@ -4,7 +4,7 @@
 		<name>Tasha's Cauldron of Everything</name>
 		<description>Tasha's Cauldron of Everything index file.</description>
 		<update version="0.0.1">
-			<file name="Tasha.index" url="https://raw.githubusercontent.com/bolle-dev/" />
+			<file name="Tasha.index" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/Tasha.index" />
 		</update>
 	</info>
 	<files>
