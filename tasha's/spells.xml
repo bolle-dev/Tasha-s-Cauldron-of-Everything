@@ -4,7 +4,7 @@
 		<name>Tasha's Spells</name>
 		<description>Tasha's Spells</description>
 		<update version="0.0.1">
-			<file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev" />
+			<file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/spells.xml" />
 		</update>
 	</info> 
    
