@@ -119,6 +119,7 @@
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING_FOCUS" level="2"/>			
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING" level="2"/>
+			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_ADDITONAL_SPELLS" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_RANGER_ARCHETYPE" level="3"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_CHOSE_PRIMAL" level="3"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_MARTIAL_VERSATILITY" level="4"/>
@@ -200,9 +201,11 @@
 		</sheet>
 		<rules>
 			<select type="Class Feature" name="Expertise (Ranger)" level="1" number="1" supports="Expertise,Skill"/>
-			<stat name="innate speed:misc" value="5" bonus="base" level="6"/>
-			<stat name="innate speed:climb:misc" value="movement:speed" level="6"/>
-			<stat name="innate speed:swim:misc" value="movement:speed" level="6"/>
+			<stat name="innate speed:misc" value="5" bonus="roving"  requirements="[innate speed:1]" level="6"/>
+			<stat name="innate speed:climb" value="innate speed" level="6" bonus="base" />
+			<stat name="innate speed:climb" value="innate speed:misc" level="6" bonus="roving" />
+			<stat name="innate speed:swim" value="innate speed" level="6" bonus="base" />
+			<stat name="innate speed:swim" value="innate speed:misc" level="6" bonus="roving" />
 			<stat name="Tireless:modifier" value="1" bonus="base" />
 			<stat name="Tireless:modifier" value="wisdom:modifier" bonus="base" />
 		</rules>
@@ -234,6 +237,28 @@
 			<description>You can use a druidic focus as a spellcasting focus for your ranger spells.</description>
 		</sheet>
 	</element>	
+	<element name="Additional spells" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_ADDITONAL_SPELLS">
+		<description>
+			<p>The spells in the following list expand the ranger spell list in the Player's Handbook. The list is organized by spell level, not character level. Each spell is in the Player's Handbook, unless it has an asterisk (a spell in chapter 3). Xanathar's Guide to Everything also offers more spells.</p>
+		</description>
+		<sheet display="False"/>
+		<spellcasting name="Ranger" extend="true">
+			<extend>ID_PHB_SPELL_ENTANGLE</extend>
+			<extend>ID_PHB_SPELL_SEARING_SMITE</extend>
+			<extend>ID_PHB_SPELL_AID</extend>
+			<extend>ID_PHB_SPELL_ENHANCE_ABILITY</extend>
+			<extend>ID_PHB_SPELL_GUST_OF_WIND</extend>
+			<extend>ID_PHB_SPELL_MAGIC_WEAPON</extend>
+			<extend>ID_TASHA_SPELL_SUMMON_BEAST</extend>
+			<extend>ID_PHB_SPELL_ELEMENTAL_WEAPON</extend>
+			<extend>ID_PHB_SPELL_MELD_INTO_STONE</extend>
+			<extend>ID_PHB_SPELL_REVIVIFY</extend>
+			<extend>ID_TASHA_SPELL_SUMMON_FEY</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_TASHA_SPELL_SUMMON_ELEMENTAL</extend>
+			<extend>ID_PHB_SPELL_GREATER_RESTORATION</extend>
+		</spellcasting>
+	</element>
 	<element name="Primal Awareness" type="Class Feature" source="Tasha's Cauldron of Everything" id="ID_WOTC_CLASSFEATURE_RANGER_PRIMAL_AWARENESS">
 		<description>
 		<p>You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.</p>
