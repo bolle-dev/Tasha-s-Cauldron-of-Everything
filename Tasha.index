@@ -8,7 +8,8 @@
 		</update>
 	</info>
 	<files>
-		<file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/spells.xml" />
+	  <file name="sorcerer-aberrant-mind.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/sorcerer-aberrant-mind.xml" />
+	  <file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/spells.xml" />
 	  <file name="revised-ranger.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/revised-ranger.xml" />
 	</files>
 </index>
