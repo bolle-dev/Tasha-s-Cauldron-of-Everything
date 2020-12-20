@@ -3,11 +3,146 @@
 	<info>
 		<name>Tasha's Spells</name>
 		<description>Tasha's Spells</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="spells.xml" url="https://raw.githubusercontent.com/bolle-dev/Tasha-s-Cauldron-of-Everything/main/tasha's/spells.xml" />
 		</update>
 	</info> 
    
+    <element name="Tasha's Caustic Brew" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_TASHAS_CAUSTIC_BREW">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>A stream of acid emanates from you in a line 30 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or be covered in acid for the spell's duration or until a creature uses its action to scrape or wash the acid off itself or another creature. A creature covered in the acid takes 2d4 acid damage at start of each of its turns.</p>
+            <p class="indent"><b><i>At Higher Levels. </i></b>When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">1</set>
+            <set name="school">Evocation</set>
+            <set name="time">1 action</set>
+            <set name="duration">Concentration, up to 1 minute</set>
+            <set name="range">Self(30-foot line)</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a bit of rotten food</set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+    <element name="Tasha's Mind Whip" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_TASHAS_MIND_WHIP">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>You psychically lash out at one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes 3d6 psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects.</p>
+            <p class="indent"><b><i>At Higher Levels. </i></b>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">2</set>
+            <set name="school"></set>
+            <set name="time">1 action</set>
+            <set name="duration">1 round</set>
+            <set name="range">90 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">false</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent"></set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+    <element name="Intellect Fortress" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_INTELLECT_FORTRESS">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on Intelligence, Wisdom, and Charisma saving throws.</p>
+            <p class="indent"><b><i>At Higher Levels. </i></b>When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">3</set>
+            <set name="school">Abjuration</set>
+            <set name="time">1 action</set>
+            <set name="duration">Concentration, up to 1 hour</set>
+            <set name="range">30 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">false</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent"></set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+    <element name="Tasha's Otherworldy Guise" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_TASHAS_OTHERWORLDY_GUISE">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:</p>
+            <ul>
+               <li>You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).</li>
+               <li>You are immune to the poisoned condition (Lower Planes) or the charmed condition (Upper Planes)</li>
+               <li>Spectral wings appear on your back, giving you a flying speed of 40 feet</li>
+               <li>You have a +2 bonus to AC</li>
+               <li>All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls</li>
+               <li>You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that lets you attack more than once when you take the Attack action on your turn.</li>                   
+            </ul>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">6</set>
+            <set name="school">Transmutation</set>
+            <set name="time">1 bonus action</set>
+            <set name="duration">Concentration, up to 1 minute</set>
+            <set name="range">self</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">an object engraved with a symbol of the Outer Planes, worth at least 500gp</set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+    <element name="Dream of the Blue Veil" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_DREAM_OF_THE_BLUE_VEIL">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>You and up to eight willing creatures within range fall unconscious for the spell's duration and experience visions of another world on the Material Plane, such as Oerth, Toril, Krynn, or Eberron. If the spell reaches its full duration, the visions conclude with each of you encountering and pulling back a mysterious blue curtain. The spell then ends with you mentally and physically transported to the world that was in the visions.</p>
+            <p class="indent">To cast this spell, you must have a magic item that originated on the world you wish to reach, and you must be aware of the world's existence, even if you don't know the world's name. Your destination in the other world is a safe location within 1 mile of where the magic item was created. Alternatively, you can cast the spell if one of the affected creatures was born on the other world, which causes your destination to be a safe location within 1 mile of where that creature was born.</p>
+            <p class="indent">The spell ends early on a creature if that creature takes any damage, and the creature isn't transported. If you take any damage, the spell ends for you and all the other creatures, with none of you being transported.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">7</set>
+            <set name="school">Conjuration</set>
+            <set name="time">10 minutes</set>
+            <set name="duration">6 hours</set>
+            <set name="range">20 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a magic item or a willing creature from the destination world</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+    <element name="Blade of Disaster" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_BLADE_OF_DISASTER">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes 4d12 force damage. This attack scores a critical hit if the number on the d20 is 18 or higher. On a critical hit, the blade deals an extra 8dl2 force damage (for a total of 12d12 force damage).</p>
+            <p class="indent">As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again.</p>
+            <p class="indent">The blade can harmlessly pass through any barrier, including a wall of force.</p>      
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">9</set>
+            <set name="school">Conjuration</set>
+            <set name="time">1 bonus action</set>
+            <set name="duration">Concentration, up to 1 minute</set>
+            <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent"></set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
     <element name="Summon Beast" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_SUMMON_BEAST">
         <supports>Wizard</supports>
         <description>
@@ -77,4 +212,79 @@
             <set name="isRitual">false</set>
         </setters>        
     </element>
+    <element name="Summon Aberration" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_SUMMON_ABERRATION">
+        <supports></supports>
+        <description>
+            <p>You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Aberrant Spirit stat block. When you cast the spell, choose Beholderkin, Slaad, or Star Spawn. The creature resembles an aberration of that kind, which determines certain traits in its stat block. The creature disappears when it drops to O hit points or when the spell ends.</p>
+            <p class="indent">The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger.</p>
+            <p class="indent">You can find the stat block in Tasha's Cauldron of Everything.</p>
+            <p class="indent"><b><i>At Higher Levels. </i></b>When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="level">4</set>
+            <set name="school">Conjuration</set>
+            <set name="time">1 action</set>
+            <set name="duration">Concentration, up to 1 hour</set>
+            <set name="range">90 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 400gp</set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>        
+    </element>
+  <element name="Mind Sliver" type="Spell" source="Tasha's Cauldron of Everything" id="ID_TASHA_SPELL_MIND_SLIVER">
+    <supports>Sorcerer</supports>
+    <description>
+      <p>You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take ld6 psychic damage and subtract ld4 from the next saving throw it makes before the end of your next turn.</p>
+      <p class="indent">This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>
+    </description>
+    <setters>
+      <set name="keywords">acid</set>
+      <set name="level">0</set>
+      <set name="school">Enchantment</set>
+      <set name="time">1 action</set>
+      <set name="duration">1 round</set>
+      <set name="range">60 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">false</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="materialComponent" />
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+  <!-- append spells-->
+  <append id="ID_PHB_SPELL_GREASE">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_FLAME_BLADE">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_FLAMING_SPHERE">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_MAGIC_WEAPON">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_VAMPIRIC_TOUCH">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_FIRE_SHIELD">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_BIGBYS_HAND">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_FLESH_TO_STONE">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_OTILUKES_FREEZING_SPHERE">
+    <supports>Sorcerer</supports>
+  </append>
+  <append id="ID_PHB_SPELL_DEMIPLANE">
+    <supports>Sorcerer</supports>
+  </append>   
 </elements>
